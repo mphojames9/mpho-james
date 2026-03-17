@@ -23,23 +23,23 @@ export default function App() {
           <h2>Services</h2>
           <div className="services">
             <div className="service slide-left">
-              <h3>Design Systems</h3>
-              <p className="muted">Tokens, components, docs — shipped and maintained.</p>
+              <h3>Full-Stack Web Development</h3>
+              <p className="muted">From idea to live product—frontend, backend, and deployment.</p>
             </div>
 
             <div className="service slide-left">
-              <h3>Product Design</h3>
-              <p className="muted">Discovery, prototypes, user testing.</p>
+              <h3>Browser-Based Tools</h3>
+              <p className="muted">Specialized in tools that run entirely in the browser with minimal friction.</p>
             </div>
 
             <div className="service slide-right">
-              <h3>Frontend Engineering</h3>
-              <p className="muted">React, Next, TypeScript, performance-first.</p>
+              <h3>MVP & Startup Builds</h3>
+              <p className="muted">Rapid, practical builds to validate ideas and ship fast.</p>
             </div>
 
             <div className="service slide-right">
-              <h3>Brand & Visuals</h3>
-              <p className="muted">Logo, identity, motion.</p>
+              <h3>Maintenance & Optimization</h3>
+              <p className="muted">Improve performance, fix issues, and scale existing systems</p>
             </div>
           </div>
         </section>
@@ -47,27 +47,168 @@ export default function App() {
         <About />
         <WhatIDoBest />
         <TwoRowShowcase />
-
-        <Projects />
-
         <WhyWorkWithMe />
 
-        <section id="testimonials" className="reveal">
-          <h2>Testimonials</h2>
-          <div className="testimonials">
-            <div className="testimonial slide-left">
-              “Absolutely brilliant — redesigned our platform and results improved across the board.”
-            </div>
+        <section id="testimonials" className="testimonials-section reveal">
+  <h2 className="section-title">Testimonials</h2>
 
-            <div className="testimonial slide-right">
-              “Delivered on time and exceeded expectations.”
-            </div>
+  <div className="testimonials-grid">
 
-            <div className="testimonial slide-left">
-              “Great communication and thoughtful design.”
-            </div>
-          </div>
-        </section>
+    {/* TESTIMONIAL 1 */}
+    <div className="testimonial-card slide-left">
+      <p className="testimonial-text">
+        “Reliable, skilled, and easy to work with.”
+      </p>
+
+      <div className="testimonial-footer">
+        <img
+          src="/assets/avatar1.jpg"
+          alt="Sarah M."
+          className="testimonial-avatar"
+        />
+        <div>
+          <strong>Sarah M.</strong>
+          <span>Cape Town, South Africa</span>
+        </div>
+      </div>
+    </div>
+
+    {/* TESTIMONIAL 2 */}
+    <div className="testimonial-card slide-right">
+      <p className="testimonial-text">
+        “Understands the problem deeply before writing a single line of code.”
+      </p>
+
+      <div className="testimonial-footer">
+        <img
+          src="/assets/avatar2.jpg"
+          alt="James K."
+          className="testimonial-avatar"
+        />
+        <div>
+          <strong>James K.</strong>
+          <span>London, UK</span>
+        </div>
+      </div>
+    </div>
+
+    {/* TESTIMONIAL 3 */}
+    <div className="testimonial-card slide-left">
+      <p className="testimonial-text">
+        “Great communication and thoughtful design.”
+      </p>
+
+      <div className="testimonial-footer">
+        <img
+          src="/assets/avatar3.jpg"
+          alt="Nadia R."
+          className="testimonial-avatar"
+        />
+        <div>
+          <strong>Nadia R.</strong>
+          <span>Berlin, Germany</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <style>{`
+    /* -------- Layout -------- */
+    .testimonials-section {
+      padding: 90px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    /* -------- Card -------- */
+    .testimonial-card {
+      background: var(--card-2);
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-text {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #5c5757;
+      margin-bottom: 26px;
+    }
+
+    /* -------- Footer -------- */
+    .testimonial-footer {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testimonial-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #1f7cff;
+    }
+
+    .testimonial-footer strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .testimonial-footer span {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* -------- Animation Hooks -------- */
+    .slide-left,
+    .slide-right {
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    .slide-left {
+      transform: translateX(-60px);
+    }
+
+    .slide-right {
+      transform: translateX(60px);
+    }
+
+    .in {
+      opacity: 1;
+      transform: translateX(0);
+      transition:
+        transform 0.8s cubic-bezier(.2,.9,.2,1),
+        opacity 0.8s ease;
+    }
+
+    /* -------- Responsive -------- */
+    @media (max-width: 900px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  `}</style>
+</section>
+
 
         <section id="pricing" className="reveal">
           <h2>Pricing</h2>
@@ -75,19 +216,19 @@ export default function App() {
             <div className="plan slide-left">
               <h3>Starter</h3>
               <div style={{ fontWeight: 800, fontSize: 22 }}>$499</div>
-              <div className="muted">Landing page + basic UI</div>
+              <div className="muted">Small web tool, landing page, or feature build</div>
             </div>
 
             <div className="plan slide-right">
               <h3>Pro</h3>
               <div style={{ fontWeight: 800, fontSize: 22 }}>$1,499</div>
-              <div className="muted">Product UI + design system</div>
+              <div className="muted">Full application module or MVP</div>
             </div>
 
             <div className="plan slide-left">
-              <h3>Enterprise</h3>
-              <div style={{ fontWeight: 800, fontSize: 22 }}>Custom</div>
-              <div className="muted">Full product & team collaboration</div>
+              <h3>Custom</h3>
+              <div style={{ fontWeight: 800, fontSize: 22 }}>Let’s talk</div>
+              <div className="muted"><strong></strong><br/>Long-term contracts, startups, or complex systems</div>
             </div>
           </div>
         </section>
@@ -151,9 +292,9 @@ export default function App() {
 
           {/* Brand */}
           <div className="footer-brand">
-            <h3>Your Name</h3>
+            <h3>James Matli</h3>
             <p className="muted">
-              Design · Frontend · Systems
+              Software Engineer · Full-Stack · Product Builder
             </p>
           </div>
 
@@ -190,8 +331,8 @@ export default function App() {
 
         {/* Bottom bar */}
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Your Name</span>
-          <span className="muted">Built with care • Design + Code</span>
+          <span>© {new Date().getFullYear()} James Matli</span>
+          <span className="muted"></span>
         </div>
       </footer>
     </div>

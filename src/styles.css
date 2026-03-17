@@ -56,6 +56,9 @@ body {
     transition: ease-in-out 250ms;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 /* Main wrapper — increase padding on mobile via media queries below */
 .wrap {
     max-width: var(--maxw);

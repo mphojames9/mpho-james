@@ -5,30 +5,62 @@ import {
   FaExternalLinkAlt,
   FaCode
 } from "react-icons/fa";
-import profile1 from "../asserts/profile.png";
-import profile2 from "../asserts/profile.png";
-import profile3 from "../asserts/profile.png";
-
+import remopdf1 from "../asserts/example1.png";
+import remopdf2 from "../asserts/example2.png";
+import remopdf3 from "../asserts/example3.jpeg";
+import landingPage1 from "../asserts/example4.jfif";
+import landingPage2 from "../asserts/example6.png";
+import landingPage3 from "../asserts/example7.png";
+import landingPage4 from "../asserts/example8.png";
+import landingPage5 from "../asserts/example9.png";
+import landingPage6 from "../asserts/example10.png";
+import landingPage7 from "../asserts/example11.png";
+import resume1 from "../asserts/resume1.png";
+import resume2 from "../asserts/resume2.png";
+import resume3 from "../asserts/resume3.png";
+import chat1 from "../asserts/chat1.png";
+import chat2 from "../asserts/chat2.png";
 
 export default function FeaturedProject() {
   const sectionRef = useRef(null);
 
   /* ---------------- Slideshow state ---------------- */
 const imagesRow1 = [
-  profile1,
-  profile2,
-  profile3,
+  remopdf1,
+  remopdf2,
+  remopdf3,
 ];
 
 const imagesRow2 = [
-  profile1,
-  profile2,
-  profile3,
+  landingPage1,
+  landingPage2,
+  landingPage3,
+  landingPage4
+];
+
+const imagesRow3 = [
+  landingPage5,
+  landingPage6,
+  landingPage7
+];
+
+const imagesRow4 = [
+  resume1,
+  resume2,
+  resume3
+];
+
+const imagesRow5 = [
+  chat1,
+  chat2
 ];
 
 
   const [index1, setIndex1] = useState(0);
   const [index2, setIndex2] = useState(0);
+  const [index4, setIndex4] = useState(0);
+  const [index5, setIndex5] = useState(0);
+
 
   useEffect(() => {
     const interval1 = setInterval(
@@ -41,10 +73,22 @@ const imagesRow2 = [
       10000
     );
 
+    const interval4 = setInterval(
+  () => setIndex4((i) => (i + 1) % imagesRow4.length),
+  10000
+);
+
+const interval5 = setInterval(
+  () => setIndex5((i) => (i + 1) % imagesRow5.length),
+  10000
+);
+
     return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-    };
+  clearInterval(interval1);
+  clearInterval(interval2);
+  clearInterval(interval4);
+  clearInterval(interval5);
+};
   }, []);
 
   /* ---------------- Intersection Observer ---------------- */
@@ -96,8 +140,73 @@ const imagesRow2 = [
     "Optimized for performance",
   ];
 
+  const primeStayFeatures = [
+  "Conversion-focused hero with real-world booking flow",
+  "Advanced search with destination, dates, and guest logic",
+  "Curated carousels driven by lifestyle-based categories",
+  "Progressive content disclosure to reduce cognitive load",
+  "Accessible, semantic HTML structure with ARIA support"
+];
+
+const primeStayTech = [
+  "Modern, component-driven frontend architecture",
+  "Vanilla JS + framework-agnostic patterns for scalability",
+  "Performance-optimized media handling and animations",
+  "Mobile-first, responsive layout with advanced UI states",
+  "Clean separation of UI, behavior."
+];
+
+const netflixFeatures = [
+  "Secure authentication with JWT",
+  "Protected routes & role-based access",
+  "Dynamic movie categories with backend API",
+  "Continue Watching with local persistence",
+  "Responsive Netflix-style UI"
+];
+
+const netflixTech = [
+  "Vanilla Javascript",
+  "Node.js + Express REST API",
+  "MongoDB database integration",
+  "JWT authentication & middleware security",
+  "Deployed on Render with CI workflow"
+];
+
+const resumeBuilderFeatures = [
+  "Dynamic resume preview while editing",
+  "Multiple professional templates",
+  "Live editing of experience and skills",
+  "Profile photo upload",
+  "Download-ready resume layout"
+];
+
+const resumeBuilderTech = [
+  "Vanilla JavaScript UI architecture",
+  "LocalStorage data persistence",
+  "Dynamic template rendering",
+  "Responsive layout engine",
+  "Client-side resume preview system"
+];
+
+const chatFeatures = [
+  "Real-time messaging using WebSockets",
+  "User authentication and chat rooms",
+  "Instant message delivery",
+  "Responsive chat UI",
+  "Live user interaction"
+];
+
+const chatTech = [
+  "React frontend",
+  "Node.js + Express backend",
+  "Socket.io real-time communication",
+  "MongoDB message storage",
+  "REST API architecture"
+];
+
+
   return (
-    <section className="featured-project reveal" ref={sectionRef}>
+    <section className="featured-project reveal" id="projects" ref={sectionRef}>
       <div className="fp-wrap">
 
         {/* HEADER */}
@@ -158,7 +267,7 @@ const imagesRow2 = [
   </a>
 
   <a
-    href="https://github.com/yourusername/remopdf"
+    href="https://github.com/mphojames9/remopdf"
     target="_blank"
     rel="noopener noreferrer"
     className="fp-btn secondary"
@@ -173,15 +282,39 @@ const imagesRow2 = [
 
         {/* ROW 2 */}
         <div className="fp-row reverse slide-right out">
-          <div className="fp-text">
-            <h3>Performance, accessibility & usability</h3>
-            <p>
-              Built for real users — keyboard navigation, Lighthouse scores,
-              and low-bandwidth environments included.
-            </p>
+            <div className="fp-text">
+    <h3>PrimeStay - Landing Page </h3>
+    <h4>Personal Project (demonstration)</h4>
+
+    <p>
+      PrimeStay is a modern accommodation discovery platform designed to reduce
+      decision fatigue and surface stays that genuinely match how people travel
+      and live. This landing page showcases strong UX judgment, scalable frontend
+      architecture, and a product-first engineering mindset.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul className="focus-list">
+      {primeStayFeatures.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <h4>Tech Highlights</h4>
+    <ul className="focus-list">
+      {primeStayTech.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
             <div className="fp-actions">
   <a
-    href="https://example.com/performance-demo"
+    href="https://mphojames9.github.io/hotelBookingsWebsite/"
     target="_blank"
     rel="noopener noreferrer"
     className="fp-btn primary"
@@ -191,7 +324,7 @@ const imagesRow2 = [
   </a>
 
   <a
-    href="https://github.com/yourusername/project-performance"
+    href="https://github.com/mphojames9/hotelBookingsWebsite"
     target="_blank"
     rel="noopener noreferrer"
     className="fp-btn secondary"
@@ -215,6 +348,215 @@ const imagesRow2 = [
           </div>
         </div>
 
+        {/* ROW 3 - NetflixApp */}
+<div className="fp-row slide-left out">
+
+ <div className="fp-image slideshow">
+            {imagesRow3.map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                className={i === index1 ? "active" : ""}
+                alt=""
+              />
+            ))}
+  </div>
+
+  <div className="fp-text">
+    <h3>StreamVault – Secure Streaming Platform</h3>
+    <h4>Full Stack Project</h4>
+
+    <p>
+      A production-ready streaming platform inspired by Netflix, built with a
+      secure authentication system, protected APIs, and dynamic content rendering.
+      Designed to demonstrate real-world backend architecture and scalable UI systems.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul className="focus-list">
+      {netflixFeatures.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <h4>Tech Highlights</h4>
+    <ul className="focus-list">
+      {netflixTech.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div className="fp-actions">
+      <a
+        href="https://netflixapp-4he1.onrender.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fp-btn primary"
+      >
+        <FaExternalLinkAlt />
+        Live Demo
+      </a>
+
+      <a
+        href="https://github.com/mphojames9/netflixapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fp-btn secondary"
+      >
+        <FaCode />
+        View Code
+      </a>
+    </div>
+  </div>
+</div>
+
+{/* ROW 4 - Resume Builder */}
+<div className="fp-row reverse slide-right out">
+
+  <div className="fp-text">
+    <h3>ResumePro – Resume Builder (RemoPDF)</h3>
+    <h4>Founder & Lead Developer</h4>
+
+    <p>
+      A browser-based resume builder that allows users to create professional
+      resumes with real-time editing and preview. The project demonstrates
+      dynamic UI rendering, structured data handling, and modern frontend
+      architecture.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul className="focus-list">
+      {resumeBuilderFeatures.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <h4>Tech Highlights</h4>
+    <ul className="focus-list">
+      {resumeBuilderTech.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div className="fp-actions">
+      <a
+        href="https://remopdf.onrender.com/resumePro/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fp-btn primary"
+      >
+        <FaExternalLinkAlt />
+        Live Demo
+      </a>
+
+      <a
+        href="https://github.com/mphojames9/remopdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fp-btn secondary"
+      >
+        <FaCode />
+        View Code
+      </a>
+    </div>
+  </div>
+
+  <div className="fp-image slideshow">
+    {imagesRow4.map((src, i) => (
+      <img
+        key={src}
+        src={src}
+        className={i === index4 ? "active" : ""}
+        alt=""
+      />
+    ))}
+  </div>
+
+</div>
+
+{/* ROW 5 - Real Time Chat App */}
+<div className="fp-row slide-right out">
+
+  {/* IMAGE LEFT */}
+  <div className="fp-image slideshow">
+    {imagesRow5.map((src, i) => (
+      <img
+        key={src}
+        src={src}
+        className={i === index5 ? "active" : ""}
+        alt="PulseChat chat interface preview"
+      />
+    ))}
+  </div>
+
+  {/* TEXT RIGHT */}
+  <div className="fp-text">
+    <h3>PulseChat – Real-Time Messaging Platform</h3>
+    <h4>Full Stack Project</h4>
+
+    <p>
+      A real-time chat application enabling users to send and receive
+      messages instantly through WebSocket communication. The platform
+      demonstrates real-time event handling, scalable backend architecture,
+      and a responsive messaging interface.
+    </p>
+
+    <h4>Key Features</h4>
+    <ul className="focus-list">
+      {chatFeatures.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <h4>Tech Highlights</h4>
+    <ul className="focus-list">
+      {chatTech.map((item, i) => (
+        <li key={i}>
+          <FaCheckCircle size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div className="fp-actions">
+      <a
+        href="https://github.com/mphojames9/real_time-_chat_app"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fp-btn primary"
+      >
+        <FaExternalLinkAlt />
+        View Project
+      </a>
+
+      <a
+        href="https://github.com/mphojames9/real_time-_chat_app"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fp-btn secondary"
+      >
+        <FaCode />
+        View Code
+      </a>
+    </div>
+  </div>
+
+</div>
       </div>
 
       <style>{`
@@ -247,7 +589,6 @@ const imagesRow2 = [
 
         .slideshow img {
           position: absolute;
-          inset: 0;
           width: 100%;
           opacity: 0;
           transition: opacity 1.2s ease;
@@ -329,13 +670,25 @@ const imagesRow2 = [
   transform: translateY(-2px);
 }
 
+  .fp-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
         /* ---------------- Mobile ---------------- */
         @media (max-width: 700px) {
           .fp-row {
             grid-template-columns: 1fr;
           }
-        }
+
+          .reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+      }
+
+
       `}</style>
     </section>
   );

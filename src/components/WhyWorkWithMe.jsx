@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import codingImg from "../asserts/codingImg.png"
 
 export default function WhyWorkWithMe() {
   const sectionRef = useRef(null);
@@ -43,7 +44,7 @@ export default function WhyWorkWithMe() {
   }, []);
 
   const reasons = [
-    "Founder mindset — I understand business and users",
+    "Founder mindset, I understand business and users",
     "Practical, no-nonsense engineering",
     "Strong communication and transparency",
     "Experience shipping real products, not just demos",
@@ -60,7 +61,7 @@ export default function WhyWorkWithMe() {
           {/* TEXT — LEFT */}
           <div className="wwm-text slide-left out">
             <span className="eyebrow">WHY WORK WITH ME</span>
-            <h2>More than code — I think like a product owner</h2>
+            <h2>More than code, I think like a product owner</h2>
             <p>
               I don’t just write features. I care about usability,
               sustainability, and solving the right problems.
@@ -79,7 +80,7 @@ export default function WhyWorkWithMe() {
           {/* IMAGE — RIGHT */}
           <div className="wwm-image slide-right out">
             <img
-              src="/images/why-work.png"
+              src={codingImg }
               alt="Product thinking and engineering"
               loading="lazy"
             />
