@@ -1,4 +1,20 @@
 import React, { useEffect } from "react";
+import spa from "../asserts/spa.jpg";
+import spa1 from "../asserts/spa1.jpg";
+import spa2 from "../asserts/spa2.jpg";
+import spa3 from "../asserts/spa3.jpg";
+import spa4 from "../asserts/spa4.jpg";
+import spa5 from "../asserts/spa5.jpg";
+
+import hotel1 from "../asserts/hotel1.jpg";
+import hotel2 from "../asserts/hotel2.jpg";
+import hotel3 from "../asserts/hotel3.jpg";
+import hotel4 from "../asserts/hotel4.jpg";
+
+import untitled1 from "../asserts/Untitled1.png";
+import untitled2 from "../asserts/Untitled2.png";
+import untitled3 from "../asserts/Untitled3.png";
+import untitled4 from "../asserts/Untitled4.png";
 
 export default function Projects() {
 
@@ -83,105 +99,116 @@ export default function Projects() {
 
   return (
     <section id="projects" className="reveal">
-      <h2>Selected Projects</h2>
+  
+  {/* SECTION HEADER */}
+  <div className="section-header">
+    <h2 className="luxury-title">Crafted Digital Experiences</h2>
+    <p className="luxury-subtitle">
+      High-converting landing pages and bespoke websites designed with precision, elegance, and performance in mind.
+    </p>
+  </div>
 
-      <div className="projects-grid">
+  <div className="projects-grid">
 
-        <div
-          className="project"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200')",
-          }}
-          data-title="Fintech Dashboard"
-          data-desc="A complex analytics dashboard — React + D3 + Design System"
-          data-images="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200,https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200"
-        >
-          <div
-            className="img-inner parallax"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200')",
-            }}
-          ></div>
-          <div className="overlay">
-            <div style={{ fontWeight: 700 }}>Fintech Dashboard</div>
-          </div>
-        </div>
-
-        <div
-          className="project"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200')",
-          }}
-          data-title="Analytics App"
-          data-desc="Interactive data visualizations and design system."
-          data-images="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200"
-        >
-          <div
-            className="img-inner parallax"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200')",
-            }}
-          ></div>
-          <div className="overlay">
-            <div style={{ fontWeight: 700 }}>Analytics App</div>
-          </div>
-        </div>
-
-        <div
-          className="project"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1508385082359-fcbb1b9d8c03?w=1200')",
-          }}
-          data-title="E-commerce UI"
-          data-desc="Conversion-focused product pages."
-          data-images="https://images.unsplash.com/photo-1508385082359-fcbb1b9d8c03?w=1200"
-        >
-          <div
-            className="img-inner parallax"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1508385082359-fcbb1b9d8c03?w=1200')",
-            }}
-          ></div>
-          <div className="overlay">
-            <div style={{ fontWeight: 700 }}>E-commerce UI</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="cta-banner caseStudy">
-        <div>
-          <strong>Want a case study like this?</strong>
-          <div className="muted">
-            I take on a limited number of high-impact projects per quarter.
-          </div>
-        </div>
-        <div>
-          <a className="btn" href="#contact">
-            Start your project
-          </a>
-        </div>
-      </div>
-
-      {/* Modal */}
+    {/* SPA PROJECT */}
+    <div
+      className="project"
+      style={{ backgroundImage: `url(${spa})` }}
+      data-title="Luxury Spa Experience"
+      data-desc="A refined wellness platform crafted to evoke calm, trust, and indulgence — blending immersive visuals with conversion-focused design."
+      data-images={`${spa},${spa1},${spa2},${spa3},${spa4},${spa5}`}
+    >
       <div
-        id="modalBackdrop"
-        className="modal-backdrop"
-        style={{ display: "none" }}
-      >
-        <div className="modal" role="dialog" aria-modal="true">
-          <button className="modal-close" id="modalClose">
-            Close ✕
-          </button>
-          <div id="modalContent"></div>
+        className="img-inner parallax"
+        style={{ backgroundImage: `url(${spa})` }}
+      ></div>
+
+      <div className="overlay">
+        <div className="project-category">Spa & Wellness</div>
+        <div className="project-title">Luxury Relaxation Redefined</div>
+        <div className="project-desc">
+          Designed to elevate brand perception and increase bookings.
         </div>
       </div>
-    </section>
+    </div>
+
+    {/* HOTEL PROJECT */}
+    <div
+      className="project"
+      style={{ backgroundImage: `url(${hotel1})` }}
+      data-title="Luxury Hotel Experience"
+      data-desc="An elegant booking experience tailored for premium hospitality brands — combining seamless UX with high-end visual storytelling."
+      data-images={`${hotel1},${hotel2},${hotel3},${hotel4}`}
+    >
+      <div
+        className="img-inner parallax"
+        style={{ backgroundImage: `url(${hotel1})` }}
+      ></div>
+
+      <div className="overlay">
+        <div className="project-category">Hotel & Booking</div>
+        <div className="project-title">Where Luxury Meets Conversion</div>
+        <div className="project-desc">
+          Built to inspire trust and drive direct reservations.
+        </div>
+      </div>
+    </div>
+
+    {/* RESTAURANT PROJECT */}
+    <div
+      className="project"
+      style={{ backgroundImage: `url(${untitled1})` }}
+      data-title="Fine Dining Experience"
+      data-desc="A sophisticated restaurant landing page showcasing ambiance, menu storytelling, and seamless reservation flow."
+      data-images={`${untitled1},${untitled2},${untitled3},${untitled4}`}
+    >
+      <div
+        className="img-inner parallax"
+        style={{ backgroundImage: `url(${untitled1})` }}
+      ></div>
+
+      <div className="overlay">
+        <div className="project-category">Restaurant</div>
+        <div className="project-title">A Taste of Digital Luxury</div>
+        <div className="project-desc">
+          Crafted to attract, engage, and convert high-end clientele.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {/* CTA */}
+  <div className="cta-banner caseStudy">
+    <div>
+      <strong className="cta-title">
+        Let’s Create Something Exceptional
+      </strong>
+      <div className="muted">
+        I collaborate with brands that value premium design, strategy, and measurable results.
+      </div>
+    </div>
+    <div>
+      <a className="btn luxury-btn" href="#contact">
+        Start Your Project →
+      </a>
+    </div>
+  </div>
+
+  {/* MODAL */}
+  <div
+    id="modalBackdrop"
+    className="modal-backdrop"
+    style={{ display: "none" }}
+  >
+    <div className="modal" role="dialog" aria-modal="true">
+      <button className="modal-close" id="modalClose">
+        Close ✕
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+</section>
   );
 }

@@ -373,16 +373,6 @@ h1 {
     -webkit-tap-highlight-color: transparent;
 }
 
-.icon:hover,
-.icon:focus {
-    transform: scale(1.12);
-    color: white;
-    border-color: var(--accent1);
-    background: linear-gradient(135deg, var(--accent1), var(--accent2));
-    box-shadow: 0 0 14px var(--accent1);
-    outline: none;
-}
-
 /* -------------------------
    PROJECTS / IMAGE MICRO-INTERACTIONS
    ------------------------- */
@@ -1077,14 +1067,6 @@ h1 {
 }
 
 /* -------------------------
-   Accessibility focus
-   ------------------------- */
-:focus {
-    outline: 1px solid var(--accent2);
-    outline-offset: 1px;
-}
-
-/* -------------------------
    Small legacy responsive fallbacks (preserve existing)
    ------------------------- */
 @media (max-width: 980px) {
@@ -1293,3 +1275,82 @@ h1 {
             font-size: 15px;
           }
         }
+
+        .project {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 320px; /* increased from 220px */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform .28s ease;
+}
+
+@media (min-width: 1200px) {
+    .project {
+        height: 380px;
+    }
+}
+
+@media (max-width: 640px) {
+    .project {
+        height: 220px; /* smaller for phones */
+    }
+}
+
+@media (max-width: 380px) {
+    .project {
+        height: 180px;
+    }
+}
+
+.project::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.1),
+        transparent
+    );
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.luxury-title {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.luxury-subtitle {
+  color: #aaa;
+  max-width: 600px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.overlay {
+  padding: 20px;
+}
+
+.project-category {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #d4af37;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+

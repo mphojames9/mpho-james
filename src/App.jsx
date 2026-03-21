@@ -45,75 +45,76 @@ export default function App() {
         </section>
 
         <About />
+        <Projects />
         <WhatIDoBest />
         <TwoRowShowcase />
         <WhyWorkWithMe />
 
-        <section id="testimonials" className="testimonials-section reveal">
-  <h2 className="section-title">Testimonials</h2>
+        <section id="testimonials" className="testimonials-section reveal" style={{ display: "none" }}>
+          <h2 className="section-title">Testimonials</h2>
 
-  <div className="testimonials-grid">
+          <div className="testimonials-grid">
 
-    {/* TESTIMONIAL 1 */}
-    <div className="testimonial-card slide-left">
-      <p className="testimonial-text">
-        “Reliable, skilled, and easy to work with.”
-      </p>
+            {/* TESTIMONIAL 1 */}
+            <div className="testimonial-card slide-left">
+              <p className="testimonial-text">
+                “Reliable, skilled, and easy to work with.”
+              </p>
 
-      <div className="testimonial-footer">
-        <img
-          src="/assets/avatar1.jpg"
-          alt="Sarah M."
-          className="testimonial-avatar"
-        />
-        <div>
-          <strong>Sarah M.</strong>
-          <span>Cape Town, South Africa</span>
-        </div>
-      </div>
-    </div>
+              <div className="testimonial-footer">
+                <img
+                  src="/assets/avatar1.jpg"
+                  alt="Sarah M."
+                  className="testimonial-avatar"
+                />
+                <div>
+                  <strong>Sarah M.</strong>
+                  <span>Cape Town, South Africa</span>
+                </div>
+              </div>
+            </div>
 
-    {/* TESTIMONIAL 2 */}
-    <div className="testimonial-card slide-right">
-      <p className="testimonial-text">
-        “Understands the problem deeply before writing a single line of code.”
-      </p>
+            {/* TESTIMONIAL 2 */}
+            <div className="testimonial-card slide-right">
+              <p className="testimonial-text">
+                “Understands the problem deeply before writing a single line of code.”
+              </p>
 
-      <div className="testimonial-footer">
-        <img
-          src="/assets/avatar2.jpg"
-          alt="James K."
-          className="testimonial-avatar"
-        />
-        <div>
-          <strong>James K.</strong>
-          <span>London, UK</span>
-        </div>
-      </div>
-    </div>
+              <div className="testimonial-footer">
+                <img
+                  src="/assets/avatar2.jpg"
+                  alt="James K."
+                  className="testimonial-avatar"
+                />
+                <div>
+                  <strong>James K.</strong>
+                  <span>London, UK</span>
+                </div>
+              </div>
+            </div>
 
-    {/* TESTIMONIAL 3 */}
-    <div className="testimonial-card slide-left">
-      <p className="testimonial-text">
-        “Great communication and thoughtful design.”
-      </p>
+            {/* TESTIMONIAL 3 */}
+            <div className="testimonial-card slide-left">
+              <p className="testimonial-text">
+                “Great communication and thoughtful design.”
+              </p>
 
-      <div className="testimonial-footer">
-        <img
-          src="/assets/avatar3.jpg"
-          alt="Nadia R."
-          className="testimonial-avatar"
-        />
-        <div>
-          <strong>Nadia R.</strong>
-          <span>Berlin, Germany</span>
-        </div>
-      </div>
-    </div>
+              <div className="testimonial-footer">
+                <img
+                  src="/assets/avatar3.jpg"
+                  alt="Nadia R."
+                  className="testimonial-avatar"
+                />
+                <div>
+                  <strong>Nadia R.</strong>
+                  <span>Berlin, Germany</span>
+                </div>
+              </div>
+            </div>
 
-  </div>
+          </div>
 
-  <style>{`
+          <style>{`
     /* -------- Layout -------- */
     .testimonials-section {
       padding: 90px 20px;
@@ -207,7 +208,7 @@ export default function App() {
       }
     }
   `}</style>
-</section>
+        </section>
 
 
         <section id="pricing" className="reveal">
@@ -228,7 +229,7 @@ export default function App() {
             <div className="plan slide-left">
               <h3>Custom</h3>
               <div style={{ fontWeight: 800, fontSize: 22 }}>Let’s talk</div>
-              <div className="muted"><strong></strong><br/>Long-term contracts, startups, or complex systems</div>
+              <div className="muted"><strong></strong><br />Long-term contracts, startups, or complex systems</div>
             </div>
           </div>
         </section>
@@ -262,19 +263,19 @@ export default function App() {
                 <FaEnvelope className="contact-icon" />
                 <div>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:hello@youremail.com">hello@youremail.com</a>
+                  <a href="mailto:hello@youremail.com">mphojames9@gmail.com</a>
                 </div>
               </div>
               <div className="contact-item">
                 <FaPhone className="contact-icon" />
                 <div>
-                  <strong>Phone:</strong> +27 600 000 000
+                  <strong>Phone:</strong> +2774 418 7026
                 </div>
               </div>
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />
                 <div>
-                  <strong>Location:</strong> Cape Town, South Africa
+                  <strong>Location:</strong> Pretoria, South Africa
                 </div>
               </div>
               <div className="contact-item">
@@ -308,21 +309,39 @@ export default function App() {
 
           {/* Social */}
           <div className="footer-social">
-            <a href="#" aria-label="GitHub" className="social-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5-.7 1.7-1 .1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.4-1.6 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z" />
-              </svg>
-            </a>
+            <a
+  href="https://www.linkedin.com/in/mpho-james-413661196"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="LinkedIn"
+  className="social-icon"
+>
+  <svg viewBox="0 0 24 24">
+    <path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.5 23.5h4V7.5h-4v16zM8.5 7.5v16h4v-8.6c0-2.1.7-3.5 2.7-3.5 1.9 0 2.3 1.4 2.3 3.5v8.6h4v-9.7c0-4.3-2.1-6.3-5.1-6.3-2.3 0-3.3 1.3-3.9 2.3h-.1V7.5h-4z" />
+  </svg>
+</a>
 
-            <a href="#" aria-label="LinkedIn" className="social-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.5 23.5h4V7.5h-4v16zM8.5 7.5v16h4v-8.6c0-2.1.7-3.5 2.7-3.5 1.9 0 2.3 1.4 2.3 3.5v8.6h4v-9.7c0-4.3-2.1-6.3-5.1-6.3-2.3 0-3.3 1.3-3.9 2.3h-.1V7.5h-4z" />
-              </svg>
-            </a>
+<a
+  href="https://github.com/mphojames9"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="GitHub"
+  className="social-icon"
+>
+  <svg viewBox="0 0 24 24">
+    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5-.7 1.7-1 .1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.4-1.6 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z" />
+  </svg>
+</a>
 
-            <a href="#" aria-label="Twitter/X" className="social-icon">
+            <a
+              href="https://www.instagram.com/matli.mpho"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="social-icon"
+            >
               <svg viewBox="0 0 24 24">
-                <path d="M18.9 2H22l-7.4 8.5L23 22h-6.6l-5.2-6.4L5.7 22H2.6l7.9-9L1 2h6.8l4.7 5.8L18.9 2z" />
+                <path d="M7.75 2h8.5C19.99 2 22 4.01 22 7.75v8.5C22 19.99 19.99 22 16.25 22h-8.5C4.01 22 2 19.99 2 16.25v-8.5C2 4.01 4.01 2 7.75 2zm0 2C5.68 4 4 5.68 4 7.75v8.5C4 18.32 5.68 20 7.75 20h8.5c2.07 0 3.75-1.68 3.75-3.75v-8.5C20 5.68 18.32 4 16.25 4h-8.5zm4.25 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.25-.88a1.12 1.12 0 1 1-1.12-1.12 1.12 1.12 0 0 1 1.12 1.12z" />
               </svg>
             </a>
           </div>
