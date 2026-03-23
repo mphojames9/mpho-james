@@ -10,7 +10,7 @@ const email = form.email.value
 const subject = form.subject.value || 'New inquiry'
 const message = form.message.value
 const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-window.location.href = `mailto:hello@youremail.com?subject=${encodeURIComponent(subject)}&body=${body}`
+window.location.href = `mailto:mphojames9@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`
 }
 
 

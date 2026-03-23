@@ -98,9 +98,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="reveal">
+<section id="projects" className="reveal">
   
-  {/* SECTION HEADER */}
+  {/* HEADER */}
   <div className="section-header">
     <h2 className="luxury-title">Crafted Digital Experiences</h2>
     <p className="luxury-subtitle">
@@ -110,18 +110,15 @@ export default function Projects() {
 
   <div className="projects-grid">
 
-    {/* SPA PROJECT */}
+    {/* SPA */}
     <div
       className="project"
       style={{ backgroundImage: `url(${spa})` }}
       data-title="Luxury Spa Experience"
-      data-desc="A refined wellness platform crafted to evoke calm, trust, and indulgence — blending immersive visuals with conversion-focused design."
+      data-desc="A refined wellness platform crafted to evoke calm, trust, and indulgence."
       data-images={`${spa},${spa1},${spa2},${spa3},${spa4},${spa5}`}
     >
-      <div
-        className="img-inner parallax"
-        style={{ backgroundImage: `url(${spa})` }}
-      ></div>
+      <div className="img-inner parallax" style={{ backgroundImage: `url(${spa})` }}></div>
 
       <div className="overlay">
         <div className="project-category">Spa & Wellness</div>
@@ -129,21 +126,27 @@ export default function Projects() {
         <div className="project-desc">
           Designed to elevate brand perception and increase bookings.
         </div>
+
+        <div className="project-actions">
+          <a href="https://your-live-demo-link.com" target="_blank" rel="noopener noreferrer" className="action-btn live">
+            View Live ↗
+          </a>
+          <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer" className="action-btn code">
+            GitHub
+          </a>
+        </div>
       </div>
     </div>
 
-    {/* HOTEL PROJECT */}
+    {/* HOTEL */}
     <div
       className="project"
       style={{ backgroundImage: `url(${hotel1})` }}
       data-title="Luxury Hotel Experience"
-      data-desc="An elegant booking experience tailored for premium hospitality brands — combining seamless UX with high-end visual storytelling."
+      data-desc="Elegant booking experience for premium hospitality brands."
       data-images={`${hotel1},${hotel2},${hotel3},${hotel4}`}
     >
-      <div
-        className="img-inner parallax"
-        style={{ backgroundImage: `url(${hotel1})` }}
-      ></div>
+      <div className="img-inner parallax" style={{ backgroundImage: `url(${hotel1})` }}></div>
 
       <div className="overlay">
         <div className="project-category">Hotel & Booking</div>
@@ -151,27 +154,42 @@ export default function Projects() {
         <div className="project-desc">
           Built to inspire trust and drive direct reservations.
         </div>
+
+        <div className="project-actions">
+          <a href="https://your-hotel-demo.com" target="_blank" rel="noopener noreferrer" className="action-btn live">
+            View Live ↗
+          </a>
+          <a href="https://github.com/your-hotel-repo" target="_blank" rel="noopener noreferrer" className="action-btn code">
+            GitHub
+          </a>
+        </div>
       </div>
     </div>
 
-    {/* RESTAURANT PROJECT */}
+    {/* RESTAURANT */}
     <div
       className="project"
       style={{ backgroundImage: `url(${untitled1})` }}
       data-title="Fine Dining Experience"
-      data-desc="A sophisticated restaurant landing page showcasing ambiance, menu storytelling, and seamless reservation flow."
+      data-desc="A sophisticated restaurant landing page with seamless reservations."
       data-images={`${untitled1},${untitled2},${untitled3},${untitled4}`}
     >
-      <div
-        className="img-inner parallax"
-        style={{ backgroundImage: `url(${untitled1})` }}
-      ></div>
+      <div className="img-inner parallax" style={{ backgroundImage: `url(${untitled1})` }}></div>
 
       <div className="overlay">
         <div className="project-category">Restaurant</div>
         <div className="project-title">A Taste of Digital Luxury</div>
         <div className="project-desc">
-          Crafted to attract, engage, and convert high-end clientele.
+          Crafted to attract and convert high-end clientele.
+        </div>
+
+        <div className="project-actions">
+          <a href="https://your-restaurant-demo.com" target="_blank" rel="noopener noreferrer" className="action-btn live">
+            View Live ↗
+          </a>
+          <a href="https://github.com/your-restaurant-repo" target="_blank" rel="noopener noreferrer" className="action-btn code">
+            GitHub
+          </a>
         </div>
       </div>
     </div>
@@ -181,9 +199,7 @@ export default function Projects() {
   {/* CTA */}
   <div className="cta-banner caseStudy">
     <div>
-      <strong className="cta-title">
-        Let’s Create Something Exceptional
-      </strong>
+      <strong className="cta-title">Let’s Create Something Exceptional</strong>
       <div className="muted">
         I collaborate with brands that value premium design, strategy, and measurable results.
       </div>
@@ -196,15 +212,9 @@ export default function Projects() {
   </div>
 
   {/* MODAL */}
-  <div
-    id="modalBackdrop"
-    className="modal-backdrop"
-    style={{ display: "none" }}
-  >
+  <div id="modalBackdrop" className="modal-backdrop" style={{ display: "none" }}>
     <div className="modal" role="dialog" aria-modal="true">
-      <button className="modal-close" id="modalClose">
-        Close ✕
-      </button>
+      <button className="modal-close" id="modalClose">Close ✕</button>
       <div id="modalContent"></div>
     </div>
   </div>
