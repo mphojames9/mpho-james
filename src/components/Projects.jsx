@@ -128,10 +128,10 @@ export default function Projects() {
         </div>
 
         <div className="project-actions">
-          <a href="https://your-live-demo-link.com" target="_blank" rel="noopener noreferrer" className="action-btn live">
+          <a href="https://mphojames9.github.io/2048-/" target="_blank" rel="noopener noreferrer" className="action-btn live">
             View Live ↗
           </a>
-          <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer" className="action-btn code">
+          <a href="https://github.com/mphojames9/2048-.git" target="_blank" rel="noopener noreferrer" className="action-btn code">
             GitHub
           </a>
         </div>
@@ -156,10 +156,10 @@ export default function Projects() {
         </div>
 
         <div className="project-actions">
-          <a href="https://your-hotel-demo.com" target="_blank" rel="noopener noreferrer" className="action-btn live">
+          <a href="https://mphojames9.github.io/resturant-page/" target="_blank" rel="noopener noreferrer" className="action-btn live">
             View Live ↗
           </a>
-          <a href="https://github.com/your-hotel-repo" target="_blank" rel="noopener noreferrer" className="action-btn code">
+          <a href="https://github.com/mphojames9/resturant-page.git" target="_blank" rel="noopener noreferrer" className="action-btn code">
             GitHub
           </a>
         </div>
@@ -184,10 +184,10 @@ export default function Projects() {
         </div>
 
         <div className="project-actions">
-          <a href="https://your-restaurant-demo.com" target="_blank" rel="noopener noreferrer" className="action-btn live">
+          <a href="https://forestpoultry.onrender.com/" target="_blank" rel="noopener noreferrer" className="action-btn live">
             View Live ↗
           </a>
-          <a href="https://github.com/your-restaurant-repo" target="_blank" rel="noopener noreferrer" className="action-btn code">
+          <a href="https://github.com/mphojames9/forestpoultry.git" target="_blank" rel="noopener noreferrer" className="action-btn code">
             GitHub
           </a>
         </div>
