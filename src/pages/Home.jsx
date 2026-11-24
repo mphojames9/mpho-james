@@ -9,8 +9,10 @@ import netflixShot from "../assets/netflix.png";
 import netflixMobile from "../assets/netflixMobile.jpg";
 import chatappShot from "../assets/chatapp.png";
 import chatappMobile from "../assets/chatappMobile.jpg";
-import gameShot from "../assets/wordfunadverture.png";
-import gameMobile from "../assets/wordfunadventureMobile.jpg";
+import shopShot from "../assets/shoppingcart.webp";
+import shopMobile from "../assets/shoppingcartMobile.jpg";
+import hotelShot from "../assets/hotelbookings.webp";
+import hotelMobile from "../assets/hotelbookingsMobile.jpg";
 // npm install react-icons
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaPython, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedinIn, FaWhatsapp, FaRegCopy, FaCheck } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss, SiJavascript } from "react-icons/si";
@@ -369,14 +371,24 @@ const PROJECTS = [
     repo: "https://github.com/mphojames9/real_time-_chat_app",
   },
   {
-    title: "Premium Word Search",
-    kind: "Browser game",
-    body: "A mobile-friendly word search with levels, coins, hints and a magic wand, plus bonus words and daily rewards that keep you coming back.",
-    tech: ["JavaScript", "HTML", "CSS"],
-    image: gameShot,
-    mobile: gameMobile,
-    href: "https://mphojames9.github.io/wordfunadventure/",
-    repo: "https://github.com/mphojames9/wordfunadventure",
+    title: "Shopping cart",
+    kind: "E-commerce app",
+    body: "OneStop, an online electronics store with category filters, live search, a wishlist and a shopping cart that updates as you add items.",
+    tech: ["React", "Node.js"],
+    image: shopShot,
+    mobile: shopMobile,
+    href: "https://shopping-cart-yvl2.onrender.com",
+    repo: "https://github.com/mphojames9/shopping-cart",
+  },
+  {
+    title: "Hotel bookings",
+    kind: "Booking website",
+    body: "PrimeStay, a hotel booking site where guests compare rooms and nightly prices, see what is left for their dates and review their stay before booking.",
+    tech: ["React", "Node.js"],
+    image: hotelShot,
+    mobile: hotelMobile,
+    href: "https://primestay-boqi.onrender.com",
+    repo: "https://github.com/mphojames9/hotelBookingsWebsite",
   },
 ];
 
@@ -410,7 +422,7 @@ function Projects() {
           Projects Showcase
         </h2>
         <p className="mt-8 max-w-md text-lg leading-relaxed text-muted">
-          A few things I&apos;ve built, from everyday tools to games.
+          A few things I&apos;ve built, from everyday tools to full web apps.
         </p>
 
         <div className="mt-16 grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
